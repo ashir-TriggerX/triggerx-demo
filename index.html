@@ -3,18 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TriggerX — Outbound Engine Demo</title>
+    <meta name="description" content="TriggerX — Intelligent outbound workflow that turns ICPs into verified leads, buying signals, and booked meetings." />
+    <meta name="theme-color" content="#0B1020" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#F6F8FB" media="(prefers-color-scheme: light)" />
+    <title>TriggerX — Outbound Intelligence Demo</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'&gt;&lt;rect width='32' height='32' rx='8' fill='%232563EB'/&gt;&lt;path d='M8 11h16M16 11v13' stroke='white' stroke-width='3' stroke-linecap='round'/&gt;&lt;/svg&gt;" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
-    <style>
-      * { box-sizing: border-box; }
-      html, body, #root { margin: 0; padding: 0; min-height: 100%; }
-      body { font-family: 'Inter', -apple-system, Helvetica, Arial, sans-serif; }
-    </style>
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem("triggerx-theme");
+          if (!t) {
+            t = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches
+              ? "dark"
+              : "light";
+          }
+          document.documentElement.setAttribute("data-theme", t);
+        } catch (e) {
+          document.documentElement.setAttribute("data-theme", "light");
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
